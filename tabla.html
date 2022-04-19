@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tabla.css">
+    <script src="index.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <title>Administrador de tablas</title>
+</head>
+<body style="background-color:#cbcccc">
+    
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="sesion.html"><img id="logo" src="img/conafe-logo.png" alt=""></a>
+    <div class="container">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link " href="principal.html">Volver a la página principal</a>
+        </li> 
+        <li class="nav-item ">
+          <a class="nav-link active " href="tabla.html">Administrar tablas</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link " href="registro.html">Nuevo Administrador</a>
+        </li>
+      </ul>
+      </div>   
+      <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="btn btn-danger" href="index.html">Cerrar Sesion</a>
+      </li>   
+    </ul>      
+    </div>
+  </nav>
+
+
+      <div >
+        
+        
+          <div class="container my-3">
+            <span   class="input-group-text">Municipio</span>
+        <input  class="form-control" type="text" placeholder="Seleccione editar para actualizar el municipio"  id="municipio" />
+        </div>
+        
+        <div class="container my-3">
+          <span   class="input-group-text">Localidad</span>
+      <input  class="form-control" type="text" placeholder="Seleccione editar para actualizar la region"  id="region" />
+      </div>
+      <div class="container my-3">
+        <span   class="input-group-text">Clave CCT</span>
+    <input  class="form-control" type="text" placeholder="Seleccione editar para actualizar la clave cct"  id="clave" />
+    </div>
+        <div class="container my-3">
+            <span   class="input-group-text">Fecha</span>
+            <input  class="form-control" type="date" id="fecha"  />
+       
+            
+        <button
+        id="btn-registrar"
+        class="btn btn-dark"
+       
+        onclick="guardar()"
+        >
+        Aceptar
+        </button>
+        </div>
+      </div>
+        
+       
+  
+        
+
+      <div class="container">
+      <input class="form-control mb-4 my-5" id="tableSearch" type="text" placeholder="Busqueda personalizada.....">
+      </div>
+        
+
+    <div id="admin">
+    <div id="tabla"  class="container my-5"></div>
+        
+    <div id="tabl"  class="container my-5"></div> 
+        
+    <div id="tab" class="container my-5"></div> 
+    </div> 
+    
+   
+    
+      <script src="app.js"></script>
+
+</body>
+</html>
